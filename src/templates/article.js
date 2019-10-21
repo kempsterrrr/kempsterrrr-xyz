@@ -38,18 +38,22 @@ export default function ArticleTemplate({ data, pageContext }) {
       </section>
       <div aria-hidden="true" className={lineStyles.line_2}></div>
       <div className={styles.div}>
-        {previous && (
-          <Link to={previous.frontmatter.path} rel="prev">
-            <img src={backArrowBlack} alt="Backward Arrow" />
-            {previous.frontmatter.title}
-          </Link>
-        )}
-        {next && (
-          <Link to={next.frontmatter.path} rel="next">
-            {next.frontmatter.title}
-            <img src={rightArrowBlack} alt="Forward Arrow" />
-          </Link>
-        )}
+        <div>
+          {previous && (
+            <Link to={previous.frontmatter.path} rel="prev">
+              <img src={backArrowBlack} alt="Backward Arrow" />
+              {previous.frontmatter.title}
+            </Link>
+          )}
+        </div>
+        <div>
+          {next && (
+            <Link to={next.frontmatter.path} rel="next">
+              {next.frontmatter.title}
+              <img src={rightArrowBlack} alt="Forward Arrow" />
+            </Link>
+          )}
+        </div>
       </div>
     </Layout>
   )

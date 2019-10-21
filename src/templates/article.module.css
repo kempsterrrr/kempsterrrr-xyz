@@ -16,17 +16,29 @@
 
 .div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2rem;
+  width: 100%;
+}
+
+.div div:first-child {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.div div:last-child {
+  align-self: flex-end;
 }
 
 .div a {
   display: flex;
+  width: 100%;
   flex-direction: row;
   font-style: italic;
 }
 
-.div a img {
-  margin: 0 1rem;
+.div div a img {
+  height: 1rem;
+  margin: 0 0.5rem;
 }

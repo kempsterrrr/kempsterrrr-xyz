@@ -25,6 +25,7 @@ const SEO = ({ title, description, author }) => {
   return (
     <Helmet
       title={title}
+      titleTemplate={`%s | kempsterrrr`}
       meta={[
         {
           name: "title",

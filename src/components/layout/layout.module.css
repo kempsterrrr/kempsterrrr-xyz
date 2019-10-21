@@ -1,0 +1,55 @@
+/* Reset
+  =============== */
+
+/* Reset box sizing to border box */
+
+/* https://flatuicolors.com/palette/gb */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  */
+figure,
+body {
+  margin: 0;
+  background-color: #f5f6fa;
+  font-size: 16px;
+}
+
+.main {
+  margin: 50px auto 0 auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.main a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main a:hover {
+  color: #fbc531;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #000;
+}
+
+p {
+  color: #353b48;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+}

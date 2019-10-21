@@ -1,0 +1,32 @@
+.article div:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.article div:first-of-type > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.article div:first-of-type > span {
+  font-style: italic;
+}
+
+.article div:not(:first-of-type) > div {
+  margin-bottom: 5rem;
+}
+
+.div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.div a {
+  display: flex;
+  flex-direction: row;
+  font-style: italic;
+}
+
+.div a img {
+  margin: 0 1rem;
+}

@@ -64,6 +64,24 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <div aria-hidden="true" className={styles.line_2}></div>
+      <section>
+        <div>
+          <h2>Projects</h2>
+        </div>
+        <div className={styles.projects_section}>
+          <div>
+            <div>{/* <img src='' alt=''/> */}</div>
+            <div>
+              <p>#react, #javascript, #recruitment</p>
+              <h2>Growable</h2>
+              <p></p>
+              <Link>Read More</Link>
+            </div>
+          </div>
+          <div>Heloo</div>
+        </div>
+      </section>
+      <div aria-hidden="true" className={styles.line_2}></div>
     </Layout>
   )
 }

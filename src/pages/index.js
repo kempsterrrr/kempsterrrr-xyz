@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   const articles = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <SEO />
+      <SEO title="kempsterrrr | Tech Recruiter and JavaScript Developer" />
       <section className={styles.hero_section}>
         <div>
           <h1>Hi, I'm Will Kempster.</h1>

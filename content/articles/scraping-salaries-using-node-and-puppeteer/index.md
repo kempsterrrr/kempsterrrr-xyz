@@ -3,6 +3,7 @@ title: Scraping London tech salaries from indeed using Node and Puppeteer
 date: "2018-08-08"
 description: A short guide on how to scrape and parse salaries from Indeed.com using Nodejs and Google's Puppeteer Chromium API
 path: /articles/scraping-salaries-using-node-and-puppeteer
+content_type: article
 ---
 
 My day job is recruitment for [Talent Point](http://talentpoint.co/). Our success is largely based on helping our partners understand the realities of the job markets they are hiring from including how much/what bang (skills + experience) they can get for their buck (budget/salary) and then planning hiring campaigns accordingly.

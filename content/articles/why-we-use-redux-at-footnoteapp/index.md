@@ -3,6 +3,7 @@ title: Why we use Redux at footnoteapp
 date: "2018-06-05"
 description: Don't listen to the haters, when your app needs it, Redux is great. This is how I used it to massively improve code quality, developer velocity and maintainability building footnoteapp.com
 path: /articles/why-we-use-redux-at-footnoteapp
+content_type: article
 ---
 
 _[footnoteapp](https://footnoteapp.com/) is a tool for automatically logging articles you read online via a lightweight extension with a more feature-rich app for organising these for safe keeping. This is a personal project working closely with [@rubengmurray](https://twitter.com/rubengmurray) and [@itstrickey](https://twitter.com/its__trickey). It's still in development with lots of work to do so bare with us!_

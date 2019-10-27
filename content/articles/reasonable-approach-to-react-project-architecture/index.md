@@ -3,6 +3,7 @@ title: My Perfectly Reasonable approach to React Project Architecture
 date: "2018-11-06"
 description: React application architecture can be complicated. Let the challenges you face drive the decisions you make
 path: /articles/reasonable-react-project-architecture
+content_type: article
 ---
 
 I’ve Google’d how to properly structure a React project countless times. Whilst learning, knowing how to organise your files is probably one of the least important things you need to be thinking about when you could be using that brain space to learn more about the fundamentals of your craft.

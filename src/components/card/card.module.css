@@ -1,0 +1,27 @@
+.card {
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 2px solid white;
+}
+
+.card:hover {
+  border-top: 2px solid #fbc531;
+  box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+}
+
+.card p {
+  font-weight: normal;
+}
+
+.card a:hover {
+  color: initial;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .card {
+    width: 45%;
+  }
+}

@@ -5,6 +5,7 @@ import moment from "moment"
 // components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Card from "../components/card"
 
 // CSS
 import styles from "./index.module.css"
@@ -42,43 +43,47 @@ const IndexPage = ({ data }) => {
         </div>
         <div>
           {articles.map(article => {
-            return (
-              <div>
-                <Link
-                  to={article.node.frontmatter.path}
-                  style={{ color: "black" }}
-                >
-                  {article.node.frontmatter.title}
-                </Link>
-                <div className={styles.article_meta_info}>
-                  <span>
-                    {moment(`${article.node.frontmatter.date}`).format(
-                      "MMM Do YYYY"
-                    )}
-                  </span>
+            if (article.node.frontmatter.content_type === "article") {
+              return (
+                <div>
+                  <Link
+                    to={article.node.frontmatter.path}
+                    style={{ color: "black" }}
+                  >
+                    {article.node.frontmatter.title}
+                  </Link>
+                  <div className={styles.article_meta_info}>
+                    <span>
+                      {moment(`${article.node.frontmatter.date}`).format(
+                        "MMM Do YYYY"
+                      )}
+                    </span>
+                  </div>
+                  <p>{article.node.frontmatter.description}</p>
                 </div>
-                <p>{article.node.frontmatter.description}</p>
-              </div>
-            )
+              )
+            }
           })}
         </div>
       </section>
       <div aria-hidden="true" className={styles.line_2}></div>
-      <section>
+      <section className={styles.projects_section}>
         <div>
           <h2>Projects</h2>
+          <Link to="/projects">View All</Link>
         </div>
-        <div className={styles.projects_section}>
-          <div>
-            <div>{/* <img src='' alt=''/> */}</div>
-            <div>
-              <p>#react, #javascript, #recruitment</p>
-              <h2>Growable</h2>
-              <p></p>
-              <Link>Read More</Link>
-            </div>
-          </div>
-          <div>Heloo</div>
+        <div className={styles.projects_container}>
+          {articles.map(project => {
+            if (project.node.frontmatter.content_type === "project") {
+              return (
+                <Card
+                  title={project.node.frontmatter.title}
+                  description={project.node.frontmatter.description}
+                  slug={project.node.frontmatter.path}
+                ></Card>
+              )
+            }
+          })}
         </div>
       </section>
       <div aria-hidden="true" className={styles.line_2}></div>
@@ -101,6 +106,7 @@ export const pageQuery = graphql`
             description
             date
             path
+            content_type
           }
         }
       }

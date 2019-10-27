@@ -3,6 +3,7 @@ title: Handling scroll events in React
 date: "2018-06-03"
 description: Handling scroll events when building JavaScript apps is really common. Here's how I handled it when implementing infinite scroll on footnoteapp.com.
 path: /articles/handling-scroll-events-in-react
+content_type: article
 ---
 
 Handling scroll events is something that I deal with regularly. The most common reason I run into it is when I am implementing infinite scrolling in a content driven app or website and, considering I couldn’t find much out there specifically about doing this in React, I thought I’d share my solution.

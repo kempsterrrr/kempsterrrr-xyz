@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.kempsterrrr.xyz`,
-    defaultTitle: `@kempsterrrr | Tech Recruiter and JavaScript Developer`,
+    defaultTitle: `Tech Recruiter and JavaScript Developer | Kempsterrrr`,
     defaultDescription: `Tech Recruiter and JavaScript Developer out of London talking primarily about React and Gatsby. Founded and MC Growable meetups.`,
     defaultAuthor: `Will Kempster`,
     twitterSite: "@kempsterrrr",
@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `articles`,
-        path: `${__dirname}/content/articles`,
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     {

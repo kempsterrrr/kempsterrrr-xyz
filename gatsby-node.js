@@ -11,6 +11,7 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const articleTemplate = path.resolve(`./src/templates/article.js`)
+  const projectTemplate = path.resolve(`./src/templates/project.js`)
 
   const result = await graphql(`
     {
@@ -23,6 +24,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
               title
+              content_type
             }
           }
         }
@@ -43,15 +45,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       index === articles.length - 1 ? null : articles[index + 1].node
     const next = index === 0 ? null : articles[index - 1].node
 
-    createPage({
-      path: `${article.node.frontmatter.path}`,
-      component: articleTemplate,
-      context: {
-        slug: article.node.frontmatter.path,
-        previous,
-        next,
-      },
-    })
+    if (article.node.frontmatter.content_type == "article") {
+      createPage({
+        path: `${article.node.frontmatter.path}`,
+        component: articleTemplate,
+        context: {
+          slug: article.node.frontmatter.path,
+          previous,
+          next,
+        },
+      })
+    }
+
+    if (article.node.frontmatter.content_type === "project") {
+      createPage({
+        path: `${article.node.frontmatter.path}`,
+        component: projectTemplate,
+        context: {
+          slug: article.node.frontmatter.path,
+          previous,
+          next,
+        },
+      })
+    }
   })
 }
 

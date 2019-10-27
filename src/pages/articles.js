@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 
 // Components
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 // CSS
 import styles from "../pages/index.module.css"
@@ -12,6 +13,10 @@ export default function Articles({ data }) {
 
   return (
     <Layout>
+      <SEO
+        title="Blog"
+        description="Articles and blog posts. Mostly focused on JavaScript, mostly front-end."
+      ></SEO>
       <section className={styles.articles_section}>
         <div>
           <h1>Articles</h1>
@@ -19,13 +24,15 @@ export default function Articles({ data }) {
         <div aria-hidden="true" className={styles.line}></div>
         <div>
           {articles.map(article => {
-            return (
-              <div>
-                <Link to={article.node.frontmatter.path}>
-                  <h2>{article.node.frontmatter.title}</h2>
-                </Link>
-              </div>
-            )
+            if (article.node.frontmatter.content_type === "article") {
+              return (
+                <div>
+                  <Link to={article.node.frontmatter.path}>
+                    <h2>{article.node.frontmatter.title}</h2>
+                  </Link>
+                </div>
+              )
+            }
           })}
         </div>
       </section>
@@ -47,6 +54,7 @@ export const query = graphql`
             description
             date
             path
+            content_type
           }
         }
       }

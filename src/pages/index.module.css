@@ -68,9 +68,37 @@
   margin-top: 0.5rem;
 }
 
+.projects_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects_section > div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.projects_section > div > a {
+  font-style: italic;
+  margin-left: 2rem;
+  font-weight: normal;
+  color: #718093;
+}
+
+.projects_container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 800px) {
   .hero_section {
     flex-direction: row;
     padding: 0;
+  }
+
+  .projects_container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

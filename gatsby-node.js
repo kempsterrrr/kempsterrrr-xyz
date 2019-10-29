@@ -38,36 +38,44 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const articles = await result.data.allMarkdownRemark.edges
+  const articles = await result.data.allMarkdownRemark.edges.filter(
+    item => item.node.frontmatter.content_type === "article"
+  )
+
+  const projects = await result.data.allMarkdownRemark.edges.filter(
+    item => item.node.frontmatter.content_type === "project"
+  )
 
   articles.forEach((article, index) => {
     const previous =
       index === articles.length - 1 ? null : articles[index + 1].node
     const next = index === 0 ? null : articles[index - 1].node
 
-    if (article.node.frontmatter.content_type == "article") {
-      createPage({
-        path: `${article.node.frontmatter.path}`,
-        component: articleTemplate,
-        context: {
-          slug: article.node.frontmatter.path,
-          previous,
-          next,
-        },
-      })
-    }
+    createPage({
+      path: `${article.node.frontmatter.path}`,
+      component: articleTemplate,
+      context: {
+        slug: article.node.frontmatter.path,
+        previous,
+        next,
+      },
+    })
+  })
 
-    if (article.node.frontmatter.content_type === "project") {
-      createPage({
-        path: `${article.node.frontmatter.path}`,
-        component: projectTemplate,
-        context: {
-          slug: article.node.frontmatter.path,
-          previous,
-          next,
-        },
-      })
-    }
+  projects.forEach((project, index) => {
+    const previous =
+      index === projects.length - 1 ? null : projects[index + 1].node
+    const next = index === 0 ? null : projects[index - 1].node
+
+    createPage({
+      path: `${project.node.frontmatter.path}`,
+      component: projectTemplate,
+      context: {
+        slug: project.node.frontmatter.path,
+        previous,
+        next,
+      },
+    })
   })
 }
 

@@ -1,4 +1,6 @@
-.hero_section div:first-of-type {
+@import url("../styles//global.css");
+
+.hero_sectiondiv:first-of-type {
   margin-right: 5px;
 }
 

@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => {
           {articles.map(article => {
             if (article.node.frontmatter.content_type === "article") {
               return (
-                <div>
+                <div key={article.node.frontmatter.title}>
                   <Link
                     to={article.node.frontmatter.path}
                     style={{ color: "black" }}
@@ -77,6 +77,7 @@ const IndexPage = ({ data }) => {
             if (project.node.frontmatter.content_type === "project") {
               return (
                 <Card
+                  key={project.node.frontmatter.title}
                   title={project.node.frontmatter.title}
                   description={project.node.frontmatter.description}
                   slug={project.node.frontmatter.path}

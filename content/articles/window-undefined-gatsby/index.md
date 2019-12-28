@@ -2,7 +2,7 @@
 title: Why is my window undefined, Gatsby?
 description: Understanding and dealing with the window undefined error during a Gatsby build.
 date: "2019-12-28"
-path: /articles/window-undefined-gatsby
+path: /articles/window-undefined-error-gatsby
 content_type: article
 ---
 
@@ -14,7 +14,7 @@ A common error I run into with [Gatsby](https://gatsbyjs.org) is `window undefin
 
 Gatsby is a static site generator. That means your website is generated at build time (on a server) rather than at run time (when a user requests your site in their browser).
 
-The error, `window undefined`, refers to the [window](https://developer.mozilla.org/en-US/docs/Web/API/Window) object which is specific to the browser environment. Given a Gatsby site is built ahead of time on your server and _not_ in a browser, your code does not have access to the window object when you (or your hosting provider) runs `Gatsby build`.
+The error, `window undefined`, refers to the [window](https://developer.mozilla.org/en-US/docs/Web/API/Window) object which is specific to the browser environment. Given a Gatsby site is built ahead of time on your server your code does not have access to the window object when you (or your hosting provider) runs `Gatsby build`.
 
 ### How do we fix it?
 

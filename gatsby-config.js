@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.kempsterrrr.xyz`,
+    siteUrl: `https://www.kempsterrrr.xyz/`,
     defaultTitle: `Tech Recruiter and JavaScript Developer | Kempsterrrr`,
     defaultDescription: `Tech Recruiter and JavaScript Developer out of London talking primarily about React and Gatsby. Founded and MC Growable meetups.`,
     defaultAuthor: `Will Kempster`,
@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        sitemap: "https://www.example.com/sitemap.xml",
+        sitemap: "https://www.kempsterrrr.xyz/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

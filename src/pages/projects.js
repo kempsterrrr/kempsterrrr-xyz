@@ -9,7 +9,7 @@ import Card from "../components/card"
 import styles from "./index.module.css"
 import { graphql } from "gatsby"
 
-export default function Projects({ data }) {
+export default function Projects({ data, location }) {
   const projects = data.allMarkdownRemark.edges
 
   return (
@@ -17,7 +17,8 @@ export default function Projects({ data }) {
       <SEO
         title="Projects"
         description="A snapshot of some of my projects. Mostly JavaScript, mostly on the front-end."
-      ></SEO>
+        location={location}
+      />
       <section>
         <div>
           <h1>Projects</h1>

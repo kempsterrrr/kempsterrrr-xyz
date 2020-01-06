@@ -3,7 +3,6 @@ title: Using Higher-order components with React and Redux
 date: "2018-07-17"
 description: Higher-order components might not be the hottest topic in React world anymore but here's how I found them super useful building footnoteapp.com.
 path: /articles/higher-order-components-react-redux
-content_type: article
 ---
 
 [React-redux](https://github.com/reduxjs/react-redux) provides a `connect()` component which allows us to wrap existing React components as they are exported, injecting data from the Redux store as well as actions (functions) you can dispatch to make changes to that store. This uses the [Higher-Order Component](https://reactjs.org/docs/higher-order-components.html) pattern which means it is a function that takes a component as an argument like so `connect(someComponent)` and returns a new component with additional properties.

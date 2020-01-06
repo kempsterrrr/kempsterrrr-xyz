@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import styles from "./article.module.css"
 import lineStyles from "../pages/index.module.css"
 
-export default function ProjectTemplate({ data, pageContext }) {
+export default function ProjectTemplate({ data, pageContext, location }) {
   const project = data.markdownRemark
 
   return (
@@ -18,6 +18,7 @@ export default function ProjectTemplate({ data, pageContext }) {
       <SEO
         title={project.frontmatter.title}
         description={project.frontmatter.description}
+        location={location}
       />
       <section className={styles.article}>
         <div>

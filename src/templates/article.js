@@ -14,7 +14,7 @@ import lineStyles from "../pages/index.module.css"
 import rightArrowBlack from "../images/right-arrow-black.svg"
 import backArrowBlack from "../images/back-arrow-black.svg"
 
-export default function ArticleTemplate({ data, pageContext }) {
+export default function ArticleTemplate({ data, pageContext, location }) {
   const article = data.markdownRemark
 
   const { previous, next } = pageContext
@@ -24,7 +24,8 @@ export default function ArticleTemplate({ data, pageContext }) {
       <SEO
         title={article.frontmatter.title}
         description={article.frontmatter.description}
-        author={article.frontmatter.description}
+        author={article.frontmatter.author}
+        location={location}
       />
       <section className={styles.article}>
         <div>

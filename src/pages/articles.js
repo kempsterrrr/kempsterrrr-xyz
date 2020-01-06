@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 // CSS
 import styles from "../pages/index.module.css"
 
-export default function Articles({ data }) {
+export default function Articles({ data, location }) {
   const articles = data.allMarkdownRemark.edges
 
   return (
@@ -16,7 +16,8 @@ export default function Articles({ data }) {
       <SEO
         title="Blog"
         description="Articles and blog posts. Mostly focused on JavaScript, mostly front-end."
-      ></SEO>
+        location={location}
+      />
       <section className={styles.articles_section}>
         <div>
           <h1>Articles</h1>

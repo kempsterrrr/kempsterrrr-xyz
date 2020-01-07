@@ -14,7 +14,7 @@ export default function Articles({ data, location }) {
   return (
     <Layout>
       <SEO
-        title="Blog"
+        title="Articles"
         description="Articles and blog posts. Mostly focused on JavaScript, mostly front-end."
         location={location}
       />

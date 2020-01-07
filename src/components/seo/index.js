@@ -31,7 +31,7 @@ const SEO = ({ title, description, author, location }) => {
   return (
     <Helmet
       title={title}
-      titleTemplate={`%s${location.pathname === "/" ? "" : "| Will Kempster"}`}
+      titleTemplate={`%s${location.pathname === "/" ? "" : " | Will Kempster"}`}
       meta={[
         {
           name: "title",

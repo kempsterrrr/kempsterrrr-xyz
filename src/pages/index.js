@@ -15,26 +15,38 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        title="Will Kempster | Tech Recruiter and JavaScript Developer"
+        title="Will Kempster | JavaScript Developer and Maker in London"
         location={location}
       />
       <section className={styles.hero_section}>
         <div>
           <h1>Hi, I'm Will Kempster.</h1>
           <p>
-            I'm a <span className={styles.highlighted}>Tech Recruiter</span> and{" "}
-            <span className={styles.highlighted}>JavaScript Developer</span> in
-            London. 🙀
+            I'm a{" "}
+            <span className={styles.highlighted}>JavaScript Developer</span> and{" "}
+            <span className={styles.highlighted}>Maker</span> in London. 🙀
           </p>
           <div className={styles.line}></div>
         </div>
         <p>
-          I co-founded (and MC) a meetup series,{" "}
-          <a href="https://growable.io">Growable</a>, and spend about 1/3rd of
-          my professional time developing at{" "}
-          <a href="https://talentpoint.co">Talent Point</a>. The rest of my time
-          is spent helping some of London's most interesting tech-first
-          businesses quickly and sustainably scale their engineering teams.
+          My day job with{" "}
+          <a href="https://www.talentpoint.co" target="_blank">
+            Talent Point
+          </a>{" "}
+          is helping some of London's most interesting tech-first business
+          quickly and sustainably scale their engineering teams. Here I have
+          Co-founded and MC a meetup series called{" "}
+          <a href="https://growable.io" target="_blank">
+            Growable
+          </a>{" "}
+          and created a mixture of internal SPAs and public facing JAMStack
+          sites using React.js.
+        </p>
+        <p>
+          This site exists to share some of my thoughts and experiences learning
+          JavaScript and making products. My end goal is to launch a successful
+          online business and in the background I'm building a SaaS product with
+          a friend to launch in 2020.
         </p>
         <div></div>
       </section>

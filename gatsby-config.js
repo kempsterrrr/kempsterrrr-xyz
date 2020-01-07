@@ -5,9 +5,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.kempsterrrr.xyz/`,
-    defaultTitle: `Tech Recruiter and JavaScript Developer | Kempsterrrr`,
-    defaultDescription: `Tech Recruiter and JavaScript Developer out of London talking primarily about React and Gatsby. Founded and MC Growable meetups.`,
+    defaultTitle: `JavaScript Developer in London | Will Kempster`,
+    defaultDescription: `Mostly talking JavaScript. Making products with React.js and Node.`,
     defaultAuthor: `Will Kempster`,
+    defaultImage: "src/images/main-seo-image.png",
     twitterSite: "@kempsterrrr",
   },
   plugins: [

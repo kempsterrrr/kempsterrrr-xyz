@@ -8,7 +8,7 @@ module.exports = {
     defaultTitle: `JavaScript Developer in London | Will Kempster`,
     defaultDescription: `Mostly talking JavaScript. Making products with React.js and Node.`,
     defaultAuthor: `Will Kempster`,
-    defaultImage: "src/images/main-seo-image.png",
+    defaultImage: "/src/images/main-seo-image.png",
     twitterSite: "@kempsterrrr",
   },
   plugins: [

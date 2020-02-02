@@ -1,3 +1,7 @@
+.article {
+  margin-bottom: 2rem;
+}
+
 .article div:first-of-type {
   margin-bottom: 2rem;
 }

@@ -23,7 +23,7 @@ export default function ProjectTemplate({ data, pageContext, location }) {
       <section className={styles.article}>
         <div>
           <h1>{project.frontmatter.title}</h1>
-          <span>Tech Meetup Brand</span>
+          <span>{project.frontmatter.description}</span>
           <div aria-hidden="true" className={lineStyles.line}></div>
         </div>
         <div dangerouslySetInnerHTML={{ __html: project.html }}></div>

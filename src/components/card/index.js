@@ -4,12 +4,13 @@ import { Link } from "gatsby"
 // CSS
 import styles from "./card.module.css"
 
-function Card({ title, description, slug }) {
+function Card({ title, description, slug, date }) {
   return (
     <div className={styles.card}>
       <Link to={slug}>
         <h3>{title}</h3>
         <p>{description}</p>
+        <div>{date}</div>
       </Link>
     </div>
   )

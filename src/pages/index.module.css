@@ -88,7 +88,7 @@
   color: #718093;
 }
 
-.projects_container {
+.projects_container > div:last-of-type {
   display: flex;
   flex-direction: column;
 }
@@ -99,7 +99,7 @@
     padding: 0;
   }
 
-  .projects_container {
+  .projects_container > div:last-of-type {
     flex-direction: row;
     justify-content: space-between;
   }

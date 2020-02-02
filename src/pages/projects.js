@@ -19,11 +19,11 @@ export default function Projects({ data, location }) {
         description="A snapshot of some of my projects. Mostly JavaScript, mostly on the front-end."
         location={location}
       />
-      <section>
+      <section className={styles.projects_container}>
         <div>
           <h1>Projects</h1>
           <p>
-            A snapshot of some of my projects. Mostly JavaScript, mostly on the
+            A snapshot of my projects. Mostly JavaScript, mostly on the
             front-end.
           </p>
         </div>
@@ -35,6 +35,7 @@ export default function Projects({ data, location }) {
                 title={project.node.frontmatter.title}
                 description={project.node.frontmatter.description}
                 slug={project.node.frontmatter.path}
+                date={project.node.frontmatter.date}
               />
             )
           })}
@@ -48,6 +49,8 @@ export const getProjects = graphql`
   query getProject {
     allMarkdownRemark(
       filter: { frontmatter: { content_type: { eq: "project" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
     ) {
       edges {
         node {

@@ -88,18 +88,20 @@ const IndexPage = ({ data, location }) => {
           <Link to="/projects">View All</Link>
         </div>
         <div className={styles.projects_container}>
-          {articles.map(project => {
-            if (project.node.frontmatter.content_type === "project") {
-              return (
-                <Card
-                  key={project.node.frontmatter.title}
-                  title={project.node.frontmatter.title}
-                  description={project.node.frontmatter.description}
-                  slug={project.node.frontmatter.path}
-                ></Card>
-              )
-            }
-          })}
+          <div>
+            {articles.map(project => {
+              if (project.node.frontmatter.content_type === "project") {
+                return (
+                  <Card
+                    key={project.node.frontmatter.title}
+                    title={project.node.frontmatter.title}
+                    description={project.node.frontmatter.description}
+                    slug={project.node.frontmatter.path}
+                  />
+                )
+              }
+            })}
+          </div>
         </div>
       </section>
       <div aria-hidden="true" className={styles.line_2}></div>

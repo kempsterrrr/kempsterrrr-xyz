@@ -8,6 +8,7 @@ import styles from "./navigation.module.css"
 import githubLogo from "../../images/github-logo-black.svg"
 import TwitterIcon from "../../icons/twitterIcon"
 import GithubIcon from "../../icons/githubIcon"
+import EmailIcon from "../../icons/emailIcon"
 
 // Data
 import socialData from "../../../data/socialData"
@@ -19,6 +20,9 @@ export default function Navigation({ menuLinks }) {
         <h1>WK</h1>
       </Link>
       <div>
+        <a href="mailto:kempsterwilliam@gmail.com">
+          <EmailIcon fill="#fbc531"></EmailIcon>
+        </a>
         <a href={socialData.twitterUrl} target="_blank">
           <TwitterIcon fill="#fbc531"></TwitterIcon>
         </a>

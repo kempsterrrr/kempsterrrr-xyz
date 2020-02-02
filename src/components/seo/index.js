@@ -12,8 +12,14 @@ const SEO = ({ title, description, author, location, seoImage }) => {
           defaultTitle
           defaultDescription
           defaultAuthor
-          defaultImage
           twitterSite
+        }
+      }
+      defaultImage: file(relativePath: { eq: "main-seo-image.png" }) {
+        childImageSharp {
+          fixed(width: 600) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
@@ -30,7 +36,7 @@ const SEO = ({ title, description, author, location, seoImage }) => {
   const metaAuthor = author || data.site.siteMetadata.defaultAuthor
   const twitterSite = data.site.siteMetadata.twitterSite
   const metaImage = `${data.site.siteMetadata.siteUrl}${seoImage ||
-    data.site.siteMetadata.defaultImage}`
+    data.defaultImage.childImageSharp.fixed.src}`
 
   return (
     <Helmet
@@ -50,7 +56,7 @@ const SEO = ({ title, description, author, location, seoImage }) => {
           content: metaType,
         },
         {
-          name: "og:seo",
+          name: "og:image",
           content: metaImage,
         },
         {

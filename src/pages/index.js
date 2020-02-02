@@ -97,6 +97,7 @@ const IndexPage = ({ data, location }) => {
                     title={project.node.frontmatter.title}
                     description={project.node.frontmatter.description}
                     slug={project.node.frontmatter.path}
+                    date={project.node.frontmatter.date}
                   />
                 )
               }

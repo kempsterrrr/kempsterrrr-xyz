@@ -48,15 +48,15 @@ const SEO = ({ title, description, author, location, seoImage }) => {
           content: metaTitle,
         },
         {
-          name: "og:title",
+          property: "og:title",
           content: metaTitle,
         },
         {
-          name: "og:type",
+          property: "og:type",
           content: metaType,
         },
         {
-          name: "og:image",
+          property: "og:image",
           content: metaImage,
         },
         {
@@ -64,7 +64,7 @@ const SEO = ({ title, description, author, location, seoImage }) => {
           content: metaDescription,
         },
         {
-          name: "og:description",
+          property: "og:description",
           content: metaDescription,
         },
         {
@@ -72,12 +72,12 @@ const SEO = ({ title, description, author, location, seoImage }) => {
           content: metaAuthor,
         },
         {
-          name: "og:author",
+          property: "og:author",
           content: metaAuthor,
         },
         {
           name: "twitter:card",
-          content: metaDescription,
+          content: "summary_large_image",
         },
         {
           name: "twitter:title",

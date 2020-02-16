@@ -1,8 +1,8 @@
 ---
-title: Why is my window undefined, Gatsby?
+title: Fixing Window Undefined Error in Gatsby
 description: Understanding and dealing with the window undefined error during a Gatsby build.
 date: "2019-12-28"
-path: /articles/window-undefined-error-gatsby
+path: /articles/fixing-window-undefined-error-gatsby
 content_type: article
 ---
 

@@ -21,7 +21,7 @@ The error, `window undefined`, refers to the [window](https://developer.mozilla.
 The simplest approach is using an `if` statement to see if the window object is defined like so:
 
 ```javascript
-if(window !=== undefined) {
+if (typeof window !== undefined) {
   // your code here
 } else {
   // your other code here

@@ -31,7 +31,7 @@ if (typeof window !== undefined) {
 You can also shorten this with a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) as follows:
 
 ```javascript
-window typeof !== undefined ? // your code here : // your other code here
+typeof window !== undefined ? // your code here : // your other code here
 ```
 
 Although Gatsby builds a static site on the server and thus doesn't have access to the `window` object at build time, at run time (when your site is loaded in the browser) Gatsby turns your page into a fully functioning React.js app, again giving your code access to the `window` object.

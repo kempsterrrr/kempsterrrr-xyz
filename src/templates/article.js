@@ -20,7 +20,7 @@ export default function ArticleTemplate({ data, pageContext, location }) {
   const { previous, next } = pageContext
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         title={article.frontmatter.title}
         description={article.frontmatter.description}

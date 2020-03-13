@@ -12,7 +12,7 @@ export default function Articles({ data, location }) {
   const articles = data.allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         title="Articles"
         description="Articles and blog posts. Mostly focused on JavaScript, mostly front-end."

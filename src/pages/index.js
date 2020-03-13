@@ -13,7 +13,7 @@ import styles from "./index.module.css"
 const IndexPage = ({ data, location }) => {
   const articles = data.allMarkdownRemark.edges
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         title="Will Kempster | JavaScript Developer and Maker in London"
         location={location}

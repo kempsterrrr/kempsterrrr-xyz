@@ -14,7 +14,7 @@ export default function ProjectTemplate({ data, pageContext, location }) {
   const project = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         title={project.frontmatter.title}
         description={project.frontmatter.description}

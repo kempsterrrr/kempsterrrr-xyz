@@ -13,7 +13,7 @@ export default function Projects({ data, location }) {
   const projects = data.allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO
         title="Projects"
         description="A snapshot of some of my projects. Mostly JavaScript, mostly on the front-end."

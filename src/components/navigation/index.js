@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { motion } from "framer-motion"
 
 // CSS
 import styles from "./navigation.module.css"
@@ -13,11 +14,16 @@ import EmailIcon from "../../icons/emailIcon"
 // Data
 import socialData from "../../../data/socialData"
 
-export default function Navigation({ menuLinks }) {
+export default function Navigation({ menuLinks, location }) {
   return (
     <nav className={styles.main_nav}>
       <Link to="/">
-        <h1>WK</h1>
+        <motion.h1
+          whileHover={{ rotate: 360 }}
+          transition={{ type: "spring", duration: 2 }}
+        >
+          {location.pathname === "/" ? "WK" : "<"}
+        </motion.h1>
       </Link>
       <div>
         <a href="mailto:kempsterwilliam@gmail.com">

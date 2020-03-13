@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 import styles from "./404.module.css"
 
 const NotFoundPage = ({ location }) => (
-  <Layout>
+  <Layout location={location}>
     <SEO location={location} title="404" />
     <section className={styles.four04}>
       <div>

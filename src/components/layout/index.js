@@ -11,10 +11,10 @@ import "typeface-ruda"
 // Data
 import config from "../../../data/SiteConfig"
 
-export default function({ children }) {
+export default function({ children, location }) {
   return (
     <>
-      <Header menuLinks={config.menuLinks}></Header>
+      <Header menuLinks={config.menuLinks} location={location}></Header>
       <main className={styles.main}>{children}</main>
     </>
   )
